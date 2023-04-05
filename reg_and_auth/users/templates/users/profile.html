@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Профиль</title>
+</head>
+<body>
+    <p><b>Пользователь:</b> {{ user.username }} </p>
+    <p><b>Имя:</b> {{ user.first_name }} </p>
+    <p><b>Фамилия:</b> {{ user.last_name }} </p>
+    <p><b>Дата рождения:</b> {{ user.profile.birthdate }} </p>
+    <p><b>Город:</b> {{ user.profile.city }} </p>
+    <p><b>Телефон:</b> {{ user.profile.telephone }} </p>
+    <p><b>Количество опубликованных статей:</b> {{ news_published }} </p>
+    <a href="{% url 'profile-edit' user.profile.id %}">Редактировать профиль</a>
+</body>
+</html>
